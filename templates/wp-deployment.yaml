@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-camara-deploy
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-camara
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-camara
+    spec:
+      containers:
+      - name: wp
+        image: wordpress:{{ .Values.wp.tag }}
+        ports:
+        - containerPort: 80
+          name: wp
+        volumeMounts:
+        - name: wordpress-persistent-storage
+          mountPath: /var/www/html
+      volumes:
+      - name: wordpress-persistent-storage
+        persistentVolumeClaim:
+          claimName: wp-pv-claim
+        resources: {}
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: {{ .Values.db.credentials.dbHost }}
+        - name: WORDPRESS_DB_NAME
+          value: {{ .Values.db.credentials.dbName }}
+        - name: WORDPRESS_DB_PASSWORD
+          value: {{ .Values.db.credentials.dbPassword }}
+        - name: WORDPRESS_DB_USER
+          value: {{ .Values.db.credentials.dbUser }}
