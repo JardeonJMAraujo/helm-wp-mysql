@@ -4,9 +4,9 @@ db:
   tag: 5.6
   credentials: 
     rootPassword: root
-    dbHost: wp-host-mysql
+    dbHost: wphost-mysql
     dbName: wp-camara
     dbUser: wp-camara
-    dbPassword: 123456sete
+    dbPassword: mysql-pass
 conf:
   serviceType: LoadBalancer
