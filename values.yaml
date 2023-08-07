@@ -3,10 +3,10 @@ wp:
 db:
   tag: 5.6
   credentials: 
-    rootPassword: root
-    dbHost: mysql-deploy
+    rootPassword: 1234567
+    dbHost: db
     dbName: wp-camara
-    dbUser: wp-camara
-    dbPassword: mysqlpass
+    dbUser: wp-user
+    dbPassword: wp-pass
 conf:
   serviceType: LoadBalancer
