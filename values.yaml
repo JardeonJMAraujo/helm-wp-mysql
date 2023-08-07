@@ -1,6 +1,6 @@
 wp: 
   tag: 6.2.1-apache
-  wordpressExtraConfigContent: |
+  wordpressExtraConfigContent:
     define('VIDEO_UPLOAD_DIR', '/var/www/html/wp-content/uploads/midias/video');
     define('VIDEO_UPLOAD_URL', 'http://localhost:8383/wp-content/uploads/midias/video');
     define('IMAGE_UPLOAD_DIR', '/var/www/html/wp-content/uploads/midias/image');
