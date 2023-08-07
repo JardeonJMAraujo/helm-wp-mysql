@@ -7,6 +7,6 @@ db:
     dbHost: wphost-mysql
     dbName: wp-camara
     dbUser: wp-camara
-    dbPassword: mysql-pass
+    dbPassword: mysqlpass
 conf:
   serviceType: LoadBalancer
