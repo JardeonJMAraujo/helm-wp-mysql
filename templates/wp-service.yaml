@@ -9,4 +9,3 @@ spec:
   type: {{ .Values.conf.serviceType }}
   ports:
     - port: 80
-    targetPort: 8383
