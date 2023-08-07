@@ -5,14 +5,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-camara
+      app: {{ .Release.Name }}-mysql
       tier: mysql
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-camara
+        app: {{ .Release.Name }}-mysql
         tier: mysql
     spec:
       containers:

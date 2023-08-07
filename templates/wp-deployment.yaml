@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-camara
+      app: {{ .Release.Name }}-wp
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-camara
+        app: {{ .Release.Name }}-wp
     spec:
       containers:
       - name: wp
