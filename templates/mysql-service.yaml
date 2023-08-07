@@ -8,6 +8,6 @@ spec:
   ports:
     - port: 3306
   selector:
-    app: mysql-wp
+    app: {{ .Release.Name }}-camara
     tier: mysql-wp
   clusterIP: None
