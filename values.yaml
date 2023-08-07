@@ -4,7 +4,7 @@ db:
   tag: 5.6
   credentials: 
     rootPassword: root
-    dbHost: mysql
+    dbHost: cnews-mysql
     dbName: wp-camara
     dbUser: wp-user
     dbPassword: wp-pass
