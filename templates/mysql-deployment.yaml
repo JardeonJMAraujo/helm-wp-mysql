@@ -6,18 +6,18 @@ spec:
   selector:
     matchLabels:
       app: {{ .Release.Name }}-camara
-      tier: mysql-wp
+      tier: mysql
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: {{ .Release.Name }}-camara
-        tier: mysql-wp
+        tier: mysql
     spec:
       containers:
       - image: mysql:{{ .Values.db.tag }}
-        name: mysql-wp
+        name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: {{ .Values.db.credentials.rootPassword }}
@@ -29,7 +29,7 @@ spec:
           value: {{ .Values.db.credentials.dbPassword }}
         ports:
         - containerPort: 3306
-          name: mysql-wp
+          name: mysql
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
