@@ -35,5 +35,7 @@ spec:
           value: {{ .Values.db.credentials.dbPassword }}
         - name: WORDPRESS_DB_USER
           value: {{ .Values.db.credentials.dbUser }}
+        - name: WORDPRESS_EXTRA_WP_CONFIG_CONTENT
+          value: {{ .Values.wp.wordpressExtraConfigContent }}
         - name: WP_AMBIENTE
           value: tes
