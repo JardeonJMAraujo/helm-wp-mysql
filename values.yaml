@@ -3,7 +3,7 @@ wp:
 db:
   tag: 5.6
   credentials: 
-    rootPassword: 1234567
+    rootPassword: "1234567"
     dbHost: db
     dbName: wp-camara
     dbUser: wp-user
