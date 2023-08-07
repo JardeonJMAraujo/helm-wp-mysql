@@ -1,15 +1,13 @@
 wp: 
   tag: 6.2.1-apache
   wordpressExtraConfigContent: |
-    // video
     define('VIDEO_UPLOAD_DIR', '/var/www/html/wp-content/uploads/midias/video');
     define('VIDEO_UPLOAD_URL', 'http://localhost:8383/wp-content/uploads/midias/video');
-    // image
     define('IMAGE_UPLOAD_DIR', '/var/www/html/wp-content/uploads/midias/image');
     define('IMAGE_UPLOAD_URL', 'http://localhost:8383/wp-content/uploads/midias/image');
-    // audio
     define('AUDIO_UPLOAD_DIR', '/var/www/html/wp-content/uploads/midias/audio');
     define('AUDIO_UPLOAD_URL', 'http://localhost:8383/wp-content/uploads/midias/audio');
+
 db:
   tag: 5.6
   credentials: 
