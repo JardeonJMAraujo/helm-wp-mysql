@@ -8,4 +8,4 @@ spec:
   selector:
     app: {{ .Release.Name }}-mysql
     tier: mysql
-  type: {{ .Values.conf.serviceType }}
+  clusterIP: None
